@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = dropdown?.querySelector(".nav-link");
 
   if (dropdown && toggle) {
+    // ⬇️ NUEVA LÍNEA: marcamos que este botón ya está controlado por main.js
+    toggle.dataset.usingMainDropdown = "true";
+
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
       dropdown.classList.toggle("open");
